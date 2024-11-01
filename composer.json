@@ -1,0 +1,26 @@
+{
+    "name": "its-webhosting/umich-oidc-login",
+    "description": "WordPress plugin that restricts access to the whole site or only certain parts based on OpenID Connect (OIDC) login and group membership information.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Regents of the University of Michigan"
+        }
+    ],
+    "scripts": {
+	    "lint": [
+		    "phpcs --config-set installed_paths ~/.config/composer/vendor/wp-coding-standards/wpcs",
+		    "phpcs --standard=WordPress *.php includes"
+	    ]
+    },
+    "require": {
+        "php": ">=7.3",
+        "jumbojett/openid-connect-php": "^0.9.10"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
